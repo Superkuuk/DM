@@ -1,0 +1,344 @@
+body {
+  background-color: white;
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.night-mode {
+  background-color: black;
+  color: #f1f1f1;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  cursor: default;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  height: 100vh;
+  width: 100vw;
+  padding: 80px 40px 40px 40px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transition: background-color 0.5s, right 0.5s;
+}
+
+.night-mode #menu {
+  background-color: #1a1a1a;
+}
+
+#console, #login {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#login {
+  align-items: stretch;
+}
+
+#login > img {
+  margin: 20px auto;
+}
+
+#login > * {
+  margin: 5px 0;
+}
+
+#login > input[type=text] {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  font-size: inherit;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 2em;
+
+  transition: background-color 0.5s, color 0.5s, border 0.2s;
+}
+
+#login > input[type=text]:focus {
+  border: 2px solid gold !important;
+  outline: none;
+}
+
+.night-mode #login > input[type=text] {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
+
+#login > input[type=submit] {
+  background-color: #d9d9d9;
+  border: none;
+  color: black;
+  border-radius: 8px;
+  padding: 17px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+  font-size: inherit;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 2em;
+}
+
+.night-mode #login > input[type=submit] {
+  background-color: #404040;
+  color: white;
+}
+
+#login > input[type=submit]:hover {
+  background-color: gold;
+  cursor: pointer;
+}
+
+#messages {
+  flex-grow: 1;
+  list-style-type: none;
+  padding: 0 17px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#messages > li {
+  padding: 2px 0;
+}
+
+#commandline {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 8px;
+  transition: border 0.2s;
+  padding: 15px;
+}
+
+.night-mode #commandline {
+  border: 2px solid #f1f1f1;
+}
+
+.border-focus {
+  border: 2px solid gold !important;
+}
+
+#command {
+  flex-grow: 1;
+  box-sizing: border-box;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: inherit;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 2em;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.night-mode #command {
+  background-color: black;
+  color: #f1f1f1;
+}
+
+#command:focus {
+  outline: none;
+}
+
+#sendButton {
+  position: relative;
+  right: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: black;
+  transition: color 0.2s;
+}
+
+#sendButton > span {
+  cursor: pointer;
+}
+
+#sendButton:hover, .night-mode #sendButton:hover {
+  color: gold;
+}
+
+.night-mode #sendButton {
+  color: #f1f1f1;
+}
+
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ /* width 60, height 34 */
+ width: 50px;
+ height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: DimGrey;
+ -webkit-transition: .4s;
+ transition: .4s;
+ border-radius: 24px;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 16px;
+ width: 16px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+ border-radius: 50%;
+}
+
+input:checked + .slider {
+ background-color: gold;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(26px);
+ -ms-transform: translateX(26px);
+ transform: translateX(26px);
+}
+
+#players {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#players > li {
+  padding: 2px 0;
+}
+
+#players > li > span {
+  margin-right: 10px;
+}
+
+#menuToggle {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.3s;
+}
+
+#menuToggle:hover {
+  color: gold;
+}
+
+#menu h1 {
+  margin: 0;
+}
+
+#menu > * {
+  padding: 8px 0;
+}
+
+.night-mode #darkModeToggle > span:first-of-type, #darkModeToggle > span:last-of-type {
+  color: gold;
+}
+
+#darkModeToggle > span:first-of-type, .night-mode #darkModeToggle > span:last-of-type {
+  color: inherit;
+}
+
+#cmdHelp {
+  position: fixed;
+  display: none;
+
+  line-height: 16px;
+  background-color: #171717;
+  color: #e3e3e3;
+  font-style: italic;
+  padding: 15px;
+  list-style-type: none;
+  bottom: 88px;
+}
+
+#cmdHelp > li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#cmdHelp::after {
+  content: '';
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #171717;
+
+  bottom: -10px;
+  left: 0;
+}
+
+.night-mode #cmdHelp {
+  background-color: #595959;
+  color: #262626;
+}
+
+.night-mode #cmdHelp::after {
+  border-top: 10px solid #595959;
+}
+
+.selected {
+  color: gold;
+}
+
+.error {
+  color: red !important;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #menu {
+    width: 25%;
+    right: -25%;
+  }
+
+  #console {
+    width: 50%;
+    margin: 0 25%;
+  }
+
+   #login {
+     width: 30%;
+     margin: 0 35%;
+   }
+}
