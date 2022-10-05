@@ -323,9 +323,83 @@ input:checked + .slider:before {
   color: red !important;
 }
 
+#musicPlayer {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.night-mode #musicPlayer {
+  border: 1px solid white;
+}
+
+#musicLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  display: none;
+}
+
+#musicLogin > span {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#musicLogin > div {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+}
+
+#trackData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  margin: 15px 25% 0 25%;
+  padding-top: 10px;
+}
+
+.night-mode #controls {
+  border-top: 1px solid white;
+}
+
+#controls > span {
+  color: inherit;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+#controls > span:hover {
+  color: gold;
+}
+
+#artist, #album {
+  font-style: italic;
+}
+
+/* Style all font awesome icons */
+/* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+.fa-brands {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fa-brands:hover {
+  color: gold;
+}
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1050px) {
   /* For desktop: */
   #menu {
     width: 25%;

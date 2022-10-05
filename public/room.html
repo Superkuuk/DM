@@ -4,6 +4,7 @@
 <title>Dungeon Machine</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css">
 <body class="night-mode">
 
@@ -27,7 +28,27 @@
       </label>
       <span class="material-symbols-outlined">light_mode</span>
     </div>
-    <div id="musicPlayer">connect Spotify</div>
+    <div id="musicPlayer">
+      <div id="musicLogin">
+        <span>Connect to enable music player</span>
+        <div>
+          <a href="/spotify" id="spotify" class="fa-brands fa-spotify"></a>
+          <a href="/apple" id="spotify" class="fa-brands fa-apple"></a>
+        </div>
+      </div>
+      <div id="musicControls">
+        <div id="trackData">
+          <span id="track">Track</span>
+          <span id="artist">Artist</span>
+          <span id="album">Album/Playlist</span>
+        </div>
+        <div id="controls">
+          <span class="material-symbols-outlined" id="prev">skip_previous</span>
+          <span class="material-symbols-outlined" id="play">play_arrow</span>
+          <span class="material-symbols-outlined" id="next">skip_next</span>
+        </div>
+      </div>
+    </div>
     <div id="room">
       <h1 id="roomname"></h1>
       <ul id="players"></ul>
