@@ -1,0 +1,40 @@
+<commands>
+  <command>
+    <id>0</id>
+    <name>setlevel</name>
+    <keywords>
+      <key>setlevel</key>
+      <key>experience</key>
+    </keywords>
+    <arguments>
+      <arg type="number">level</arg>
+    </arguments>
+    <description>Sets your own level to given number</description>
+  </command>
+
+  <command>
+    <id>1</id>
+    <name>exit</name>
+    <keywords>
+      <key>exit</key>
+      <key>stop</key>
+      <key>quit</key>
+      <key>leave</key>
+    </keywords>
+    <arguments></arguments>
+    <description>Exit the current room</description>
+  </command>
+
+  <command>
+    <id>2</id>
+    <name>roll</name>
+    <keywords>
+      <key>roll</key>
+      <key>dice</key>
+    </keywords>
+    <arguments>
+      <arg type="text">dice</arg>
+    </arguments>
+    <description>Rolls dice (example: 2d20)</description>
+  </command>
+</commands>

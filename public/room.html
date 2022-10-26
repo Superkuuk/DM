@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Dungeon Machine</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<body class="night-mode">
+
+  <div id="console">
+    <ul id="messages"></ul>
+    <div id="quickClick"></div>
+    <form id="commandline" action="" class="border-focus">
+      <input type="text" id="command" autocomplete="off" placeholder="..." autofocus />
+      <ul id="cmdHelp"></ul>
+      <button id="sendButton"><span class="material-symbols-outlined">send</span></button>
+    </form>
+  </div>
+
+  <div id="menu">
+    <span class="material-symbols-outlined" id="menuToggle">settings</span>
+    <div id="darkModeToggle">
+      <span class="material-symbols-outlined">dark_mode</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <span class="material-symbols-outlined">light_mode</span>
+    </div>
+    <div id="musicPlayer">
+      <div id="musicLogin">
+        <div>
+          <span>Connect to enable music player</span>
+          <a href="/spotify" id="spotify" class="fa-brands fa-spotify"></a>
+        </div>
+      </div>
+      <div id="musicControls">
+        <div id="trackData">
+          <span id="track">Track</span>
+          <span id="artist">Artist</span>
+          <span id="album">Album/Playlist</span>
+        </div>
+        <div id="controls">
+          <span class="material-symbols-outlined" id="prev">skip_previous</span>
+          <span class="material-symbols-outlined" id="play">play_arrow</span>
+          <span class="material-symbols-outlined" id="next">skip_next</span>
+        </div>
+      </div>
+    </div>
+    <div id="room">
+      <h1 id="roomname"></h1>
+      <ul id="players"></ul>
+    </div>
+  </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="ui.js"></script>
+  <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="cmdHelp.js"></script>
+  <script type="text/javascript" src="connection.js"></script>
+  <script type="text/javascript" src="player.js"></script>
+  <script type="text/javascript" src="spotify.js"></script>
+</body>
+</html>

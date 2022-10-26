@@ -1,0 +1,90 @@
+<commands>
+  <command>
+    <id>0</id>
+    <name>setlevel</name>
+    <keywords>
+      <key weight="10">setlevel</key>
+      <key weight="1">experience</key>
+    </keywords>
+    <arguments>
+      <arg type="number">level</arg>
+    </arguments>
+    <description>Sets your own level to given number.</description>
+  </command>
+
+  <command>
+    <id>1</id>
+    <name>exit</name>
+    <keywords>
+      <key weight="10">exit</key>
+      <key weight="8">stop</key>
+      <key weight="8">quit</key>
+      <key weight="8">leave</key>
+    </keywords>
+    <arguments></arguments>
+    <description>Exit the current room.</description>
+  </command>
+
+  <command>
+    <id>2</id>
+    <name>roll</name>
+    <keywords>
+      <key weight="10">roll</key>
+      <key weight="2">dice</key>
+    </keywords>
+    <arguments>
+      <arg type="text">dice</arg>
+    </arguments>
+    <description>Rolls dice (example: 2d20).</description>
+  </command>
+
+  <command>
+    <id>3</id>
+    <name>getdatabase</name>
+    <keywords>
+      <key weight="2">getdatabase</key>
+      <key weight="1">getlibrary</key>
+    </keywords>
+    <arguments>
+      <arg type="text">table</arg>
+    </arguments>
+    <description>Gets the specific table database from xml file on server.</description>
+  </command>
+
+  <command>
+    <id>4</id>
+    <name>npc</name>
+    <keywords>
+      <key weight="10">npc</key>
+    </keywords>
+    <arguments>
+      <arg type="text">add/remove</arg>
+      <arg type="text">name</arg>
+      <arg type="number">level</arg>
+    </arguments>
+    <description>Adds or removes an NPC player.</description>
+  </command>
+
+  <command>
+    <id>5</id>
+    <name>togglenight</name>
+    <keywords>
+      <key weight="5">togglenight</key>
+      <key weight="1">toggleday</key>
+      <key weight="2">nightmode</key>
+      <key weight="1">lightmode</key>
+    </keywords>
+    <arguments></arguments>
+    <description>Toggles between day and night mode.</description>
+  </command>
+
+  <command>
+    <id>6</id>
+    <name>help</name>
+    <keywords>
+      <key weight="10">help</key>
+    </keywords>
+    <arguments></arguments>
+    <description>Provides help.</description>
+  </command>
+</commands>
